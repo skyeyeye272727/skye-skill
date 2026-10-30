@@ -1,0 +1,15 @@
+interface:
+  display_name: "SKYE"
+  short_description: "公司電腦的 AI 助手：整理電腦與 NAS 檔案、準備上架照片、操作電腦上的 App；網站用 AI 自己的瀏覽器"
+  brand_color: "#2F6BD8"
+  default_prompt: "叫 SKYE 幫我：把這份行程上架到官網（只建立、不公開），完成後回讀比對並用白話回報。"
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "skye_operators"
+      description: "SKYE（SKYE Operators，so）本機工具：檔案、NAS、電腦上的 App、選用的瀏覽器；由 SKYE 系統匣「連接 AI」加入"
+      transport: "stdio"
